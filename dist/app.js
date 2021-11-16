@@ -10137,8 +10137,16 @@ var MyScene = /** @class */ (function () {
                                             })];
                                     case 3:
                                         _a.sent();
-                                        _a.label = 4;
+                                        return [3 /*break*/, 6];
                                     case 4:
+                                        if (!(data['addr2'].toLowerCase() == ad[0].toLowerCase())) return [3 /*break*/, 6];
+                                        return [4 /*yield*/, contract.methods.claimnft(data['p2'], data['id']).send({
+                                                from: ad[0]
+                                            })];
+                                    case 5:
+                                        _a.sent();
+                                        _a.label = 6;
+                                    case 6:
                                         this.get_my_details();
                                         return [2 /*return*/];
                                 }
@@ -10283,7 +10291,7 @@ var MyScene = /** @class */ (function () {
                 rp = this._player.clone("rp_" + id);
                 rp.checkCollisions = false;
                 this._player.checkCollisions = false;
-                rp.position.y = -1.6;
+                rp.position.y = 1.5;
                 rp.ellipsoid = new babylonjs__WEBPACK_IMPORTED_MODULE_0__["Vector3"](0.5, 1, 0.5);
                 rp.ellipsoidOffset = new babylonjs__WEBPACK_IMPORTED_MODULE_0__["Vector3"](0, 0.5, 0);
                 this._playerList[id] = new _RemoteCharacterController__WEBPACK_IMPORTED_MODULE_3__["RemoteCharacterController"](rp, this._scene, id, this._roomId);
