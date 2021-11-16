@@ -9619,7 +9619,7 @@ var MyScene = /** @class */ (function () {
                     ctx1.fillRect(0, 0, 512, 256);
                     ctx1.font = '70px niko';
                     ctx1.fillStyle = "white";
-                    ctx1.fillText("#" + _this._currentBlock, 20, 120);
+                    ctx1.fillText(_this._currentBlock, 20, 120);
                     _this.brdcanvas.update();
                     ctx.fillStyle = "black";
                     ctx.fillRect(0, 0, 600, 400);
